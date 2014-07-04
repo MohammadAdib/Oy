@@ -8,7 +8,7 @@
     <string name="login">Login</string>
     <string name="motherland">Motherland</string>
     <string name="empty">"Oy, don't leave anything blank!"</string>
-    <string name="username_taken">Username Taken</string>
+    <string name="username_taken">Username Taken</string> <!-- By 2 million other brown people. -->
     <string name="try_again">Try Again</string>
     <string name="invite">INVITE</string>
     <string name="type_username">TYPE USERNAME TO ADD</string>
