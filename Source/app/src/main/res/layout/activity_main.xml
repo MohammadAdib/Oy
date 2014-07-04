@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:id="@+id/root"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_padding"
+                android:tag="@string/invite"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:text="@string/invite"
+                android:textColorHint="@android:color/white"
+                android:textSize="@dimen/text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@color/turquoise"
+                android:id="@+id/invite" />
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:background="@color/blue"
+                android:layout_height="match_parent" />
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewFlipper"
+                android:background="@color/green">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add"
+                    android:padding="@dimen/text_padding"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/username"
+                    android:padding="@dimen/text_padding"
+                    android:capitalize="characters"
+                    android:gravity="center"
+                    android:maxLength="140"
+                    android:background="#00000000"
+                    android:hint="@string/type_username"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:digits="_,qwertzuiopasdfghjklyxcvbnm,QWERTYUIOPASDFGHJKLZXCVBNM,0123456789"
+                    android:visibility="invisible" />
+
+            </ViewFlipper>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/menu"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/menu" />
+
+</RelativeLayout>

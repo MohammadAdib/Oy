@@ -1,0 +1,101 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity"
+        android:id="@+id/root"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <include
+                    layout="@layout/fragment_user"
+                    android:id="@+id/user_info" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/invite"
+                    android:padding="@dimen/text_padding"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="@string/invite"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@color/green" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/oys"
+                    android:padding="@dimen/text_padding"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="@string/oys"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@color/b" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signout"
+                    android:padding="@dimen/text_padding"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="@string/signout"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@color/c" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_title"
+                    android:textAllCaps="true"
+                    android:id="@+id/about"
+                    android:textSize="@dimen/text_size"
+                    android:padding="@dimen/text_padding"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="sans-serif"
+                    android:background="@color/yellow" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/done"
+                    android:padding="@dimen/text_padding"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="@string/done"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</merge>

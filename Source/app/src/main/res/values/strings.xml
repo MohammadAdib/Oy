@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Oy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="signup">Sign up</string>
+    <string name="login">Login</string>
+    <string name="motherland">Motherland</string>
+    <string name="empty">"Oy, don't leave anything blank!"</string>
+    <string name="username_taken">Username Taken</string>
+    <string name="try_again">Try Again</string>
+    <string name="invite">INVITE</string>
+    <string name="type_username">TYPE USERNAME TO ADD</string>
+    <string name="add">+</string>
+    <string name="error_friends">Error retrieving friends list</string>
+    <string name="error_adding">Error adding friend</string>
+    <string name="error_deleting">Error deleting friend</string>
+    <string name="done">DONE</string>
+    <string name="signout">SIGN OUT</string>
+    <string name="username">USERNAME</string>
+    <string name="about_title">What is Oy?</string>
+    <string name="password">PASSWORD</string>
+    <string name="oys">"Oy\'s: "</string>
+    <string name="short_desc">It\'s Yo for brown people</string>
+    <string name="example1">Favorite Hindi cinema on TV? Oy</string>
+    <string name="example2">Father\'s cousin\'s aunty-in-law\'s sister got married? Oy</string>
+    <string name="example3">Favorite Cricket player just made a run? Oy</string>
+    <string name="example4">Beta, it\'s still in beta</string>
+
+    <string-array name="motherlands">
+        <item>India</item>
+        <item>Bangladesh</item>
+        <item>Pakistan</item>
+        <item>Wannabe</item>
+    </string-array>
+
+</resources>

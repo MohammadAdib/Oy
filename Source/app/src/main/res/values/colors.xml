@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="turquoise">#1BBC9B</color>
+    <color name="green">#2DCC70</color>
+    <color name="blue">#2980b9</color>
+    <color name="brown">#733d1a</color>
+    <color name="purple">#9a59b5</color>
+    <color name="yellow">#f1c40f</color>
+    <color name="red">#e74c3c</color>
+
+    //item colors
+    <color name="a">#3598DB</color>
+    <color name="b">#34495E</color>
+    <color name="c">#16A086</color>
+    <color name="d">#F1C40F</color>
+    <color name="e">#9A59B5</color>
+    <color name="f">#E14A39</color>
+</resources>

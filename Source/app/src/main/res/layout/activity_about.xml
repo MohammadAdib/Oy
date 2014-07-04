@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:id="@+id/root"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_padding"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:text="@string/about_title"
+                android:textColorHint="@android:color/white"
+                android:textSize="@dimen/text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@color/turquoise" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/whatif"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/short_desc"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_medium"
+                android:background="@color/a"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/yo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example1"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/b"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example2"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/c"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example3"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/d"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example4"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/red"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Made by Mohammad Adib"
+                android:padding="@dimen/text_padding"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/brown"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/developer" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
