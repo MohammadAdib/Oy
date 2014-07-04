@@ -28,6 +28,7 @@ import android.widget.TextView;
 
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
+import com.parse.PushService;
 
 public class AccountActivity extends OyUtils.TransitionActivity {
 
@@ -54,13 +55,16 @@ public class AccountActivity extends OyUtils.TransitionActivity {
         findViewById(R.id.signout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Unsubscribe from this user's notifications
+                PushService.unsubscribe(AccountActivity.this, mCurrentUser.getUsername().toUpperCase());
+                //Log user out
                 mCurrentUser.logOut();
+                //Take them to the intro
                 Intent intent = new Intent(AccountActivity.this, IntroActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-                ParseInstallation.getCurrentInstallation().deleteInBackground();
             }
         });
         //Launch about activity

@@ -41,12 +41,15 @@ import com.parse.FindCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
+import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
+import com.parse.PushService;
 import com.parse.SaveCallback;
 import com.parse.SendCallback;
 
+import java.text.ParsePosition;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -64,8 +67,8 @@ public class MainActivity extends ListActivity {
         setContentView(R.layout.activity_main);
         ParseAnalytics.trackAppOpened(getIntent());
         //Check if user is logged in
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        if (currentUser == null) {
+        mCurrentUser = ParseUser.getCurrentUser();
+        if (mCurrentUser == null) {
             //Not logged in, take user to intro
             Intent intent = new Intent(MainActivity.this, IntroActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -89,10 +92,8 @@ public class MainActivity extends ListActivity {
             });
             //Setup the [+] button
             setupAddFriendsView();
-            // Store username in installation
-            ParseInstallation installation = ParseInstallation.getCurrentInstallation();
-            installation.put(ParseConstants.KEY_USERNAME, ParseUser.getCurrentUser().getUsername().toString().toUpperCase());
-            installation.saveInBackground();
+            // Subscribe to notifications for this user's channel
+            PushService.subscribe(this, mCurrentUser.getUsername().toUpperCase(), getClass());
         }
     }
 
@@ -107,7 +108,6 @@ public class MainActivity extends ListActivity {
      * Load the list of added friends into mFriends
      */
     public void loadFriendsList() {
-        mCurrentUser = ParseUser.getCurrentUser();
         mFriendsRelation = mCurrentUser.getRelation(ParseConstants.KEY_FRIENDS_RELATION);
         ParseQuery<ParseUser> query = mFriendsRelation.getQuery();
         query.addAscendingOrder(ParseConstants.KEY_USERNAME);

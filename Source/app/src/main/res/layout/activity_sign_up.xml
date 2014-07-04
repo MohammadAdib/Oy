@@ -104,6 +104,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/roti_progress_spinner"
         android:layout_below="@+id/scrollView"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true" />

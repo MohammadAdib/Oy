@@ -33,9 +33,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.ParseInstallation;
 import com.parse.ParsePush;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SendCallback;
 
@@ -50,12 +48,9 @@ public class OyUtils {
         try {
             String message = "From " + ParseUser.getCurrentUser().getUsername().toLowerCase();
             JSONObject data = new JSONObject("{\"action\": \"mohammad.adib.oy.UPDATE_STATUS\",\"alert\": \"" + message + "\"}");
-            // Create our Installation query
-            ParseQuery pushQuery = ParseInstallation.getQuery();
-            pushQuery.whereEqualTo(ParseConstants.KEY_USERNAME, username);
             // Send push notification to query
             ParsePush push = new ParsePush();
-            push.setQuery(pushQuery);
+            push.setChannel(username);
             push.setData(data);
             push.sendInBackground(callback);
         } catch (Exception e) {
