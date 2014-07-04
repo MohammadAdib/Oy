@@ -27,7 +27,7 @@ public class OyApplication extends Application {
 
 	@Override
 	public void onCreate() {
-        Parse.initialize(this, "Mo7icKI3Sluuo1LvYJDvp7lcZBQmJbcIaS5dosTK", "ZHcw9IWmSBRkirpkfmLBBAPKvNrog4h0qb63qo8G");
+        Parse.initialize(this, "YOUR_APP_ID", "YOUR_CLIENT_KEY");
         PushService.setDefaultPushCallback(this, MainActivity.class);
         running = true;
 	}
